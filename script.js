@@ -1,16 +1,16 @@
-const botaoSoltaMagia = document.querySelector('#botao-magia');
+const botaoMostraPalavras = document.querySelector('#botao-palavrachave');
 
-botaoSoltaMagia.addEventListener('click', liberarMagiaTexto);
+botaoMostraPalavras.addEventListener('click', mostraPalavrasChave);
 
-function liberarMagiaTexto() {
-    const textoEncantado = document.querySelector('#entrada-feitico').value;
-    const campoEncantado = document.querySelector('#resultado-magia');
-    const palavrasMisteriosas = processaTexto(textoEncantado);
+function mostraPalavrasChave() {
+    const texto = document.querySelector('#entrada-de-texto').value;
+    const campoResultado = document.querySelector('#resultado-palavrachave');
+    const palavrasChave = processaTexto(texto);
 
-    campoResultado.textContent = palavrasMisteriosas.join(", ");
+    campoResultado.textContent = palavrasChave.join(", ");
 }
 
-function processaTexto(textoEncantado) {
-    let palavras = textoEncantado.split(/\P{L}+/u);
+function processaTexto(texto) {
+    let palavras = texto.split(/\P{L}+/u);
     return palavras;
 }
