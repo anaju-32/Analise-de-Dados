@@ -2,7 +2,7 @@
 
 :root {
     --cor-destaque: #ff89b0;
-    --cor-gradiente-verde: linear-gradient(113deg, #3EB489 0%, #3EB489 44.96%, #3EB489 100%);
+    --cor-gradiente-verde: linear-gradient(113deg, #9de3b2 0%, #9de3b2 44.96%, #9de3b2 100%);
 }
 
 * {
@@ -16,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 16px 21px 18px 21px;
-    background-color: #3EB489 !important; 
+    background-color: #9de3b2 !important; 
     height: 100vh;
     flex-direction: column;
 }
