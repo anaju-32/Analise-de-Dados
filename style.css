@@ -16,7 +16,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 16px 21px 18px 21px;
-    background-color: #9de3b2; 
+    background-color: #9de3b2 !important; 
     height: 100vh;
     flex-direction: column;
 }
