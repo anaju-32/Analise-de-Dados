@@ -1,16 +1,16 @@
-const botaoMostraPalavras = document.querySelector('#botao-palavrachave');
+const btnExibirTermos = document.querySelector('#botao-palavrachave');
 
-botaoMostraPalavras.addEventListener('click', mostraPalavrasChave);
+btnExibirTermos.addEventListener('click', exibirTermosChave);
 
-function mostraPalavrasChave() {
-    const texto = document.querySelector('#entrada-de-texto').value;
-    const campoResultado = document.querySelector('#resultado-palavrachave');
-    const palavrasChave = processaTexto(texto);
+function exibirTermosChave() {
+    const conteudoDigitado = document.querySelector('#entrada-de-texto').value;
+    const areaExibicao = document.querySelector('#resultado-palavrachave');
+    const termosExtraidos = separarPalavras(conteudoDigitado);
 
-    campoResultado.textContent = palavrasChave.join(", ");
+    areaExibicao.textContent = termosExtraidos.join(", ");
 }
 
-function processaTexto(texto) {
-    let palavras = texto.split(/\P{L}+/u);
-    return palavras;
+function separarPalavras(frase) {
+    let listaDeTermos = frase.split(/\P{L}+/u);
+    return listaDeTermos;
 }
